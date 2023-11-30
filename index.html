@@ -7,22 +7,35 @@
   </head>
   <body>
     <h1>
-      {{timer}}
+      <input type="hidden" id="set-time" value="30"/>
+      <div id="countdown">
+        <div id='tiles' class="color-full"></div>
+        <div id ="left" class="countdown-label">Timer</div>
+      </div>
       <input type="button" value="Start" onclick="pause"
       <div class="dropdown">
         <button onclick="add()" class="dropbtn">Add</button>
         <div id="myDropdown" class="dropdown-content">
-          <a href="#Three-sec">3 Seconds</a>
+          <a href="#Three-sec">30 Seconds</a>
           <a href="#Three-min">3 Minutes</a>
         </div>
       </div>
     </h1>
-    <div class="buttons">
-      <button type="button" class="button-a" onclick="msg()"></button>
-      <button type="button" class="button-b" onclick="msg()"></button>
-      <button type="button" class="button-c" onclick="msg()"></button>
-      <button type="button" class="button-d" onclick="msg()"></button>
-      <button type="button" class="button-e" onclick="msg()"></button>
-    </div>
+    <table>
+      <tr>
+        <td>
+        <div class="buttons">
+          <button type="button" class="button-a" onclick="display_a()"></button>
+          <button type="button" class="button-b" onclick="display_b()"></button>
+          <button type="button" class="button-c" onclick="display_c()"></button>
+          <button type="button" class="button-d" onclick="display_d()"></button>
+          <button type="button" class="button-e" onclick="display_e()"></button>
+        </div>
+      </td>
+      <td>
+        {{}}
+      </td>
+      </tr>
+    </table>
   </body>
 </html>

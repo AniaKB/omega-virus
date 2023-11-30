@@ -1,41 +1,74 @@
+h1{
+  text-align: center;
+}
+
 .buttons {
   display: block;
   margin: auto;
-  padding: 10px;
+  padding: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: space-around;
+  gap: 5px;
+  justify-content: center;
+  order: 3;
 }
 
 .buttons > button {
-  background-position: center;
+  background-size: 100%;
   border: none;
-  padding: 100px;
-  border-radius: 15px;
+  padding: 80px;
   text-align: center;
   text-decoration: none;
   display: block;
   margin-left: auto;
   margin-right: auto;
   font-size: 10px;
-  box-shadow: 12px 12px #999;
 }
 
 .button-a {
   background-image: url("images/A.png");
 }
 
+.button-a:active {
+  background-image: url("images/A-pressed.png");
+  background-size: 100%;
+}
+
 .button-b {
   background-image: url("images/B.png");
+}
+
+.button-b:active {
+  background-image: url("images/B-pressed.png");
+  background-size: 100%;
 }
 
 .button-c {
   background-image: url("images/C.png");
 }
 
+.button-c:active {
+  background-image: url("images/C-pressed.png");
+  background-size: 100%;
+}
+
 .button-d {
   background-image: url("images/D.png");
 }
 
+.button-d:active {
+  background-image: url("images/D-pressed.png");
+  background-size: 100%;
+}
+
 .button-e {
   background-image: url("images/E.png");
+}
+
+.button-e:active {
+  background-image: url("images/E-pressed.png");
+  background-size: 100%;
 }
 
 .dropbtn {
