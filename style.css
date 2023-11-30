@@ -1,11 +1,14 @@
-h1{
+h1 {
   text-align: center;
   margin: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 50px;
 }
 
 .buttons {
   display: block;
-  margin: auto;
   padding: 10%;
   display: flex;
   flex-wrap: wrap;
@@ -72,23 +75,25 @@ h1{
   background-size: 100%;
 }
 
+.left {
+  width: 60%;
+}
+
+.right {
+  width: 40%;
+  opacity: 0.5;
+}
+
 .dropbtn {
-  background-color: #3498DB;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
+  font: 25px Arial, sans-serif;
+	color: #65584c;
+	text-align: center;
+	text-transform: uppercase;
+	display: inline-block;
+  letter-spacing: 2px;
+  width: 20%;
 }
 
-.dropbtn:hover, .dropbtn:focus {
-  background-color: #2980B9;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
 
 .dropdown-content {
   display: none;
@@ -107,11 +112,10 @@ h1{
   display: block;
 }
 
-.dropdown a:hover {background-color: #ddd;}
-
 .show {display: block;}
 
-body{
+
+body {
 	font: normal 13px/20px Arial, Helvetica, sans-serif; 
   word-wrap:break-word;
 	background: #fff;
@@ -127,12 +131,12 @@ body{
   letter-spacing: 2px;
   margin-top: 9px
 }
+
 #countdown{
   box-shadow: 0 1px 2px 0 rgba(1, 1, 1, 0.4);
   width: 240px;
 	height: 96px;
   background: #f1f1f1;
-	border-radius: 5px;
 }
 
 #countdown #tiles{
@@ -141,29 +145,27 @@ body{
 	z-index: 1;
   text-shadow: 1px 1px 0px #ccc;
 	display: inline-block;
-  font-family: Arial, sans-serif;
+  font-family: sans-serif;
 	text-align: center;
   padding: 20px;
-  border-radius: 5px 5px 0 0;
   font-size: 48px;
   font-weight: thin;
   display: block;
 }
 
 .color-full {
-  background: #53bb74;
+  background: #55a46e;
 }
 .color-half {
-  background: #ebc85d;
+  background: #e7c869;
 }
 .color-empty {
-  background: #e5554e;
+  background: #ff6961;
 }
 
 #countdown #tiles > span{
 	width: 70px;
 	max-width: 70px;
-
 	padding: 18px 0;
 	position: relative;
 }
@@ -185,6 +187,7 @@ body{
 	text-transform: uppercase;
 	display: inline-block;
 }
+
 .cd__main
 {    background: linear-gradient(45deg, #ebb25d, #21f445bf)!important;
     display: block;
