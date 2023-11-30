@@ -71,9 +71,10 @@ h1 {
 
 .left {
   width: 60%;
+  box-shadow: 7px 7px #666;
 }
 
-.right > button {
+.appear {
   opacity: 0.5;
 }
 
@@ -125,7 +126,7 @@ body {
 }
 
 #countdown{
-  box-shadow: 0 1px 2px 0 rgba(1, 1, 1, 0.4);
+  box-shadow: 0 1px 2px 0 rgba(90, 57, 57, 0.5);
   width: 240px;
 	height: 96px;
   background: #f1f1f1;
