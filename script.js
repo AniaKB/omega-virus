@@ -18,6 +18,7 @@ window.onclick = function(event) {
   }
 }
 
+
 //timer
 var minutes = $( '#set-time' ).val();
 
@@ -34,25 +35,17 @@ var days, hours, minutes, seconds; // variables for time units
 
 var countdown = document.getElementById("tiles"); // get tag element
 
-getCountdown();
-
 setInterval(function () { getCountdown(); }, 1000);
 
 function getCountdown(){
-
 	// find the amount of "seconds" between now and target
 	var current_date = new Date().getTime();
 	var seconds_left = (target_date - current_date) / 1000;
 
 if ( seconds_left >= 0 ) {
   console.log(time_limit);
-   if ( (seconds_left * 1000 ) < ( time_limit / 2 ) )  {
-     $( '#tiles' ).removeClass('color-full');
-     $( '#tiles' ).addClass('color-half');
-
-		}
     if ( (seconds_left * 1000 ) < ( time_limit / 4 ) )  {
-    	$( '#tiles' ).removeClass('color-half');
+    	$( '#tiles' ).removeClass('color-full');
     	$( '#tiles' ).addClass('color-empty');
     }
 

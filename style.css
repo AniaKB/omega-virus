@@ -1,6 +1,5 @@
 h1 {
   text-align: center;
-  margin: auto;
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
@@ -33,7 +32,6 @@ h1 {
 .button-a {
   background-image: url("images/A.png");
 }
-
 .button-a:active {
   background-image: url("images/A-pressed.png");
   background-size: 100%;
@@ -42,7 +40,6 @@ h1 {
 .button-b {
   background-image: url("images/B.png");
 }
-
 .button-b:active {
   background-image: url("images/B-pressed.png");
   background-size: 100%;
@@ -51,7 +48,6 @@ h1 {
 .button-c {
   background-image: url("images/C.png");
 }
-
 .button-c:active {
   background-image: url("images/C-pressed.png");
   background-size: 100%;
@@ -60,7 +56,6 @@ h1 {
 .button-d {
   background-image: url("images/D.png");
 }
-
 .button-d:active {
   background-image: url("images/D-pressed.png");
   background-size: 100%;
@@ -69,7 +64,6 @@ h1 {
 .button-e {
   background-image: url("images/E.png");
 }
-
 .button-e:active {
   background-image: url("images/E-pressed.png");
   background-size: 100%;
@@ -79,21 +73,19 @@ h1 {
   width: 60%;
 }
 
-.right {
-  width: 40%;
+.right > button {
   opacity: 0.5;
 }
+
 
 .dropbtn {
   font: 25px Arial, sans-serif;
 	color: #65584c;
 	text-align: center;
 	text-transform: uppercase;
-	display: inline-block;
   letter-spacing: 2px;
-  width: 20%;
+  width: 200px;
 }
-
 
 .dropdown-content {
   display: none;
@@ -156,9 +148,9 @@ body {
 .color-full {
   background: #55a46e;
 }
-.color-half {
+/*.color-half {
   background: #e7c869;
-}
+}*/
 .color-empty {
   background: #ff6961;
 }
@@ -182,7 +174,6 @@ body {
 	width: 102px;
 	font: bold 15px 'Droid Sans', Arial, sans-serif;
 	color: #f47321;
-	text-shadow: 1px 1px 0px #000;
 	text-align: center;
 	text-transform: uppercase;
 	display: inline-block;
