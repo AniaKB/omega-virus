@@ -11,19 +11,18 @@
       <h1>
         <button
           v-if="started"
-          class="dropbtn"
+          class="drop-button"
           @click="pause"
         >
           Pause
         </button>
         <button
           v-else
-          class="dropbtn"
+          class="drop-button"
           @click="start"
         >
           Start
         </button>
-        <input type="hidden" id="set-time" value="30" />
         <div id="countdown">
           <div id="tiles" class="color-full">
             {{ formatTime(remainingSeconds) }}
@@ -31,25 +30,30 @@
           <div id ="left" class="countdown-label">Timer</div>
         </div>
         <div class="dropdown">
-          <select>
-            <option>Add</option>
-            <option>30 Sec</option>
-            <option>3 Min</option>
+          <button
+            class="drop-button"
+            @click="addTime"
+          >
+            {{ amountToAdd }}
+          </button>
+          <select
+            v-model="amountToAdd"
+            class="drop-down-button"
+          >
+            <option value="Add 30 Sec">Add 30 Sec</option>
+            <option value="Add 3 Min">Add 3 Min</option>
           </select>
-          <button class="dropbtn">Add</button>
-
-
         </div>
       </h1>
       <table>
         <tr>
           <td class="left">
             <div class="buttons">
-              <button type="button" class="button-a" onclick="display_a()"></button>
-              <button type="button" class="button-b" onclick="display_b()"></button>
-              <button type="button" class="button-c" onclick="display_c()"></button>
-              <button type="button" class="button-d" onclick="display_d()"></button>
-              <button type="button" class="button-e" onclick="display_e()"></button>
+              <button type="button" class="button-a"></button>
+              <button type="button" class="button-b"></button>
+              <button type="button" class="button-c"></button>
+              <button type="button" class="button-d"></button>
+              <button type="button" class="button-e"></button>
             </div>
           </td>
           <td class="buttons">

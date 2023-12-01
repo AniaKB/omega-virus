@@ -4,7 +4,8 @@ const app = Vue.createApp({
   data: function () {
     return {
       started: false,
-      minutes: 1,
+      amountToAdd: 'Add',
+      minutes: 30,
       remainingSeconds: 0,
       interval: null
     };
@@ -31,6 +32,14 @@ const app = Vue.createApp({
       this.remainingSeconds = this.remainingSeconds - 1000;
       if (this.remainingSeconds <= 0) {
         clearInterval(this.interval);
+      }
+    },
+    addTime: function () {
+      if (this.amountToAdd === 'Add 30 Sec') {
+        this.remainingSeconds = this.remainingSeconds + 30 * 1000;
+      }
+      if (this.amountToAdd === 'Add 3 Min') {
+        this.remainingSeconds = this.remainingSeconds + 3 * 60 * 1000;
       }
     }
   },
