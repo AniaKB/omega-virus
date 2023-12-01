@@ -52,7 +52,7 @@ body {
 .buttons button {
   background-size: 100%;
   border: none;
-  padding: 65px;
+  padding: 55px;
   text-align: center;
   text-decoration: none;
   display: block;
@@ -133,7 +133,7 @@ body {
   font-size: 25px;
   font-family: sans-serif;
   letter-spacing: 2px;
-  text-align: center;
+  text-align: center !important;
   text-transform: uppercase;
 }
 
