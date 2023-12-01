@@ -9,7 +9,7 @@
   </head>
   <body>
     <div id="app">
-      <div class="row top">
+      <div class="row-top">
         <div class="cell">
           <div>
             <button
@@ -33,24 +33,16 @@
             <div class="tiles color-full">
               {{ formatTime(remainingSeconds) }}
             </div>
-            <div class="countdown-label">Timer</div>
           </div>
         </div>
         <div class="cell dropdown">
           <div>
-            <button
-              class="drop-button"
-              @click="addTime"
-            >
-              {{ amountToAdd }}
-            </button>
-            <select
+            <div
               v-model="amountToAdd"
-              class="drop-down-button"
             >
-              <option value="Add 30 Sec">Add 30 Sec</option>
-              <option value="Add 3 Min">Add 3 Min</option>
-            </select>
+              <button @click="addTime(30 * 1000)" class="drop-down-button">30 Sec</button>
+              <button @click="addTime(3 * 60 * 1000)" class="drop-down-button">3 Min</button>
+          </div>
           </div>
         </div>
       </div>

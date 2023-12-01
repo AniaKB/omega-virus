@@ -1,3 +1,16 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#app {
+  width: inherit;
+  height: inherit;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font: normal 13px/20px sans-serif;
   word-wrap: break-word;
@@ -37,6 +50,13 @@ body {
   justify-content: space-around;
 }
 
+.row-top {
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  }
+
 .buttons {
   background: #E9E9ED;
 }
@@ -44,7 +64,7 @@ body {
 .buttons button {
   background-size: 100%;
   border: none;
-  padding: 80px;
+  padding: 55px;
   text-align: center;
   text-decoration: none;
   display: block;
@@ -53,7 +73,7 @@ body {
   font-size: 10px;
 }
 .history {
-  max-width: 320px;
+  max-width: 300px;
   margin-top: 30px;
 }
 .history img {
@@ -101,22 +121,16 @@ body {
 }
 
 .left {
-  box-shadow: 7px 7px #666;
+  box-shadow: 4px 4px #666;
 }
 
 .appear {
   opacity: 0.5;
 }
 
-.dropdown {
-  position: relative;
-  width: 300px;
-  height: 35px;
-}
-
 .drop-button,
 .drop-down-button {
-  width: 300px;
+  width: 110px;
   color: #65584C;
   font-size: 25px;
   font-family: sans-serif;
@@ -124,38 +138,13 @@ body {
   text-align: center;
   text-transform: uppercase;
 }
-.dropdown .drop-button {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 270px;
-  z-index: 2;
-}
-.dropdown .drop-down-button {
-  position: absolute;
-  left: 0px;
-  z-index: 1;
-}
 
 .color-full {
   background: #55A46E;
 }
 
-.countdown-label {
-  font-size: 20px;
-  font-family: sans-serif;
-  color: #65584C;
-  text-align: center;
-  text-transform: uppercase;
-  display: inline-block;
-  letter-spacing: 2px;
-  margin-top: 9px
-}
-
 .countdown {
   background: #F1F1F1;
-  width: 240px;
-  height: 96px;
   margin: 20px 20px 20px 20px;
   box-shadow: 0 1px 2px 0 rgba(90, 57, 57, 0.5);
 }

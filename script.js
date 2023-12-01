@@ -36,13 +36,8 @@ const app = Vue.createApp({
         clearInterval(this.interval);
       }
     },
-    addTime: function () {
-      if (this.amountToAdd === 'Add 30 Sec') {
-        this.remainingSeconds = this.remainingSeconds + 30 * 1000;
-      }
-      if (this.amountToAdd === 'Add 3 Min') {
-        this.remainingSeconds = this.remainingSeconds + 3 * 60 * 1000;
-      }
+    addTime: function (time) {
+        this.remainingSeconds = this.remainingSeconds + time;
     },
     pressButton: function (button) {
       this.lastPressed.push(button);
