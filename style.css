@@ -67,12 +67,12 @@ body {
 }
 .history img,
 .placeholder {
-  width: 70px;
+  width: 60px;
 }
 .placeholder {
   display: inline-block;
-  width: 68px;
-  height: 68px;
+  width: 60px;
+  height: 60px;
   background: #eaeaea;
   border-radius: 6px;
   margin: 0px 2px 2px 0px;
@@ -133,7 +133,7 @@ body {
   font-size: 25px;
   font-family: sans-serif;
   letter-spacing: 2px;
-  text-align: center !important;
+  text-align: center;
   text-transform: uppercase;
 }
 
