@@ -64,8 +64,17 @@ body {
   max-width: 300px;
   margin-top: 5px;
 }
-.history img {
+.history img,
+.placeholder {
   width: 70px;
+}
+.placeholder {
+  display: inline-block;
+  width: 68px;
+  height: 68px;
+  background: #CCC;
+  border-radius: 6px;
+  margin: 0px 2px 2px 0px;
 }
 
 .button-a {

@@ -62,10 +62,13 @@
         </div>
         <div class="cell">
           <div class="history">
-            <img
-              v-for="button in lastPressed"
-              :src="'images/' + button.toUpperCase() + '.png'"
-            >
+            <template v-for="button in history">
+              <div v-if="button === 0" class="placeholder"></div>
+              <img
+                v-else
+                :src="'images/' + button.toUpperCase() + '.png'"
+              >
+            </template>
             <button
               v-if="lastPressed.length"
               class="drop-button"

@@ -46,6 +46,15 @@ const app = Vue.createApp({
       }
     }
   },
+  computed: {
+    history: function () {
+      let arr = [...this.lastPressed];
+      while (arr.length < 9) {
+        arr.push(0);
+      }
+      return arr;
+    }
+  },
   created: function () {
     this.initialize();
   }
