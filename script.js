@@ -7,7 +7,9 @@ const app = Vue.createApp({
       amountToAdd: 'Add',
       minutes: 30,
       remainingSeconds: 0,
-      interval: null
+      interval: null,
+      buttons: ['a', 'b', 'c', 'd', 'e'],
+      lastPressed: []
     };
   },
   methods: {
@@ -40,6 +42,12 @@ const app = Vue.createApp({
       }
       if (this.amountToAdd === 'Add 3 Min') {
         this.remainingSeconds = this.remainingSeconds + 3 * 60 * 1000;
+      }
+    },
+    pressButton: function (button) {
+      this.lastPressed.push(button);
+      if (this.lastPressed.length > 9) {
+        this.lastPressed.shift();
       }
     }
   },

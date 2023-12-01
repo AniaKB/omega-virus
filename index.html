@@ -49,18 +49,28 @@
         <tr>
           <td class="left">
             <div class="buttons">
-              <button type="button" class="button-a"></button>
-              <button type="button" class="button-b"></button>
-              <button type="button" class="button-c"></button>
-              <button type="button" class="button-d"></button>
-              <button type="button" class="button-e"></button>
+              <button
+                v-for="button in buttons"
+                type="button"
+                :class="'button-' + button"
+                @click="pressButton(button)"
+              ></button>
             </div>
           </td>
-          <td class="buttons">
-            <img src="">
-            <img src="">
-            <img src="">
-            <img src="">
+          <td>
+            <div class="history">
+              <img
+                v-for="button in lastPressed"
+                :src="'images/' + button.toUpperCase() + '.png'"
+              >
+              <button
+                v-if="lastPressed.length"
+                class="drop-button"
+                @click="lastPressed = []"
+              >
+                Reset
+              </button>
+            </div>
           </td>
         </tr>
       </table>

@@ -28,6 +28,12 @@ h1 {
   margin-right: auto;
   font-size: 10px;
 }
+.history {
+  width: 320px;
+}
+.history img {
+  width: 100px;
+}
 
 .button-a {
   background-image: url("images/A.png");
