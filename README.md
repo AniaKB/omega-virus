@@ -6,5 +6,4 @@ A timed game where you have to find the virus and press the correct button combi
 * [x] Timer pauses when you hit pause button
 * [x] Add button 30 seconds
 * [x] Add button 3 minutes
-* [ ] Display sequence of 4 buttons being pressed
-* [ ] When time is low, change color from green to red (color-full color-empty)
+* [x] Display sequence of 4 buttons being pressed

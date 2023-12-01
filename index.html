@@ -1,6 +1,7 @@
 <!DOCTYPE html>
   <head>
     <meta charset="UTF-8">
+    <title>Omega Virus!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/vue@3.2.36/dist/vue.global.prod.js"></script>
@@ -8,72 +9,78 @@
   </head>
   <body>
     <div id="app">
-      <h1>
-        <button
-          v-if="started"
-          class="drop-button"
-          @click="pause"
-        >
-          Pause
-        </button>
-        <button
-          v-else
-          class="drop-button"
-          @click="start"
-        >
-          Start
-        </button>
-        <div id="countdown">
-          <div id="tiles" class="color-full">
-            {{ formatTime(remainingSeconds) }}
+      <div class="row top">
+        <div class="cell">
+          <div>
+            <button
+              v-if="started"
+              class="drop-button"
+              @click="pause"
+            >
+              Pause
+            </button>
+            <button
+              v-else
+              class="drop-button"
+              @click="start"
+            >
+              Start
+            </button>
           </div>
-          <div id ="left" class="countdown-label">Timer</div>
         </div>
-        <div class="dropdown">
-          <button
-            class="drop-button"
-            @click="addTime"
-          >
-            {{ amountToAdd }}
-          </button>
-          <select
-            v-model="amountToAdd"
-            class="drop-down-button"
-          >
-            <option value="Add 30 Sec">Add 30 Sec</option>
-            <option value="Add 3 Min">Add 3 Min</option>
-          </select>
+        <div class="cell">
+          <div class="countdown">
+            <div class="tiles color-full">
+              {{ formatTime(remainingSeconds) }}
+            </div>
+            <div class="countdown-label">Timer</div>
+          </div>
         </div>
-      </h1>
-      <table>
-        <tr>
-          <td class="left">
-            <div class="buttons">
-              <button
-                v-for="button in buttons"
-                type="button"
-                :class="'button-' + button"
-                @click="pressButton(button)"
-              ></button>
-            </div>
-          </td>
-          <td>
-            <div class="history">
-              <img
-                v-for="button in lastPressed"
-                :src="'images/' + button.toUpperCase() + '.png'"
-              >
-              <button
-                v-if="lastPressed.length"
-                class="drop-button"
-                @click="lastPressed = []"
-              >
-                Reset
-              </button>
-            </div>
-          </td>
-        </tr>
-      </table>
+        <div class="cell dropdown">
+          <div>
+            <button
+              class="drop-button"
+              @click="addTime"
+            >
+              {{ amountToAdd }}
+            </button>
+            <select
+              v-model="amountToAdd"
+              class="drop-down-button"
+            >
+              <option value="Add 30 Sec">Add 30 Sec</option>
+              <option value="Add 3 Min">Add 3 Min</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="cell left">
+          <div class="buttons">
+            <button
+              v-for="button in buttons"
+              type="button"
+              :class="'button-' + button"
+              @click="pressButton(button)"
+            ></button>
+          </div>
+        </div>
+        <div class="cell">
+          <div class="history">
+            <img
+              v-for="button in lastPressed"
+              :src="'images/' + button.toUpperCase() + '.png'"
+            >
+            <button
+              v-if="lastPressed.length"
+              class="drop-button"
+              @click="lastPressed = []"
+            >
+              Reset
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

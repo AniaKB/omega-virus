@@ -8,7 +8,7 @@ const app = Vue.createApp({
       minutes: 30,
       remainingSeconds: 0,
       interval: null,
-      buttons: ['a', 'b', 'c', 'd', 'e'],
+      buttons: ['a', 'c', 'e', 'b', 'd'],
       lastPressed: []
     };
   },
