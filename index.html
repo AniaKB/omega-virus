@@ -14,17 +14,17 @@
           <div>
             <button
               v-if="started"
-              class="drop-button"
+              class="start-button"
               @click="pause"
             >
-              Pause
+              PAUSE
             </button>
             <button
               v-else
-              class="drop-button"
+              class="start-button"
               @click="start"
             >
-              Start
+              START
             </button>
           </div>
         </div>
@@ -40,8 +40,18 @@
             <div
               v-model="amountToAdd"
             >
-              <button @click="addTime(30 * 1000)" class="drop-down-button">30 Sec</button>
-              <button @click="addTime(3 * 60 * 1000)" class="drop-down-button">3 Min</button>
+              <button
+                class="drop-down-button"
+                @click="addTime(30 * 1000)"
+              >
+                +30s
+              </button>
+              <button
+                class="drop-down-button"
+                @click="addTime(3 * 60 * 1000)"
+              >
+                +3m
+              </button>
           </div>
           </div>
         </div>
@@ -70,10 +80,10 @@
               >
             </template>
             <button
-              class="drop-button"
+              class="reset-button"
               @click="lastPressed = []"
             >
-              Reset
+              RESET
             </button>
           </div>
         </div>
