@@ -57,12 +57,15 @@
       <div class="row">
         <div class="cell left">
           <div class="buttons">
-            <button
-              v-for="button in buttons"
-              type="button"
-              :class="'button-' + button"
-              @click="pressButton(button)"
-            ></button>
+            <div class="top-row">
+              <button class="button-a" @click="pressButton('a')"></button>
+              <button class="button-c" @click="pressButton('c')"></button>
+              <button class="button-e" @click="pressButton('e')"></button>
+            </div>
+            <div class="bottom-row">
+              <button class="button-b" @click="pressButton('b')"></button>
+              <button class="button-d" @click="pressButton('d')"></button>
+            </div>
           </div>
         </div>
         <div class="cell">

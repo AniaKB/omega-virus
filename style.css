@@ -29,16 +29,19 @@ body {
   }
 }
 
-.buttons {
+.top-row {
   display: flex;
-  flex-wrap: wrap;
-  align-items: space-around;
-  gap: 5px;
-  justify-content: center;
-  order: 3;
+}
+.bottom-row {
+  display: flex;
+  justify-content: space-around;
 }
 
-.buttons > button {
+.buttons {
+  background: #E9E9ED;
+}
+
+.buttons button {
   background-size: 100%;
   border: none;
   padding: 80px;
