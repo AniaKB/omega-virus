@@ -129,12 +129,13 @@ body {
 
 .drop-button,
 .drop-down-button {
-  width: 120px;
+  width: 135px;
   color: #65584C;
   font-size: 25px;
   font-family: sans-serif;
   letter-spacing: 1px;
   text-align: left;
+  padding-left: 20px;
   text-transform: uppercase;
 }
 
